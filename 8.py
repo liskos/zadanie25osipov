@@ -1,12 +1,10 @@
 # допускается также
 # использовать две
 # целочисленные переменные x и y
-a = []
+b = []
 n = 30
 for i in range(0, n):
-    a.append(int(input()))
-b = []
-for element in a:
-    if element >= 180:
-        b.append(element)
+    x = int(input())
+    if x >= 180:
+        b.append(x)
 print(min(b))
