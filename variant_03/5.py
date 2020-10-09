@@ -1,12 +1,10 @@
+def al(s):
+    a = list(map(int, str(s)))
+    little, big = min(a[0]+a[1], a[1]+a[2]), max(a[0]+a[1], a[1]+a[2])
+    return int(str(big) + str(little))
+
+
 for i in range(100, 1000):
-    i = str(i)
-    x1, x2, x3 = map(int, i)
-    y1, y2 = x1 + x2, x2 + x3
-    s1, s2 = str(y1), str(y2)
-    if y1 > y2:
-        s = s1 + s2
-    else:
-        s = s2 + s1
-    if s == '1712':
+    if al(i) == 1712:
         print(i)
         break
