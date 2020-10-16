@@ -1,14 +1,17 @@
-def F(x):
-    x = bin(x)
-    x = x[2:]
-    x = x.replace('1', '2')
-    x = x.replace('0', '1')
-    x = x.replace('2', '0')
-    R = int(x, 2)
-    return R + 1
+def algor(x):
+    s = ""
+    for i in range(8):
+        s = str(x % 2) + s
+        x = x // 2
+    s1 = ""
+    for i in range(8):
+        if s[i] == "0":
+            s1 += "1"
+        else:
+            s1 += "0"
+    return int(s1, 2) + 1
 
 
-for i in range(257):
-    print(F(i), i)
-    if F(i) == 221:
-        break
+for n in range(1, 128):
+    if algor(n) == 221:
+        print(n)

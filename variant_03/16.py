@@ -1,8 +1,7 @@
-def F(n):
-    if n > 3:
-        return F(n-1) + 5 * F(n - 2)
-    else:
+def f(n):
+    if n <= 3:
         return 2 * n + 3
+    return f(n - 1) + 5 * f(n -2)
 
 
-print(F(10))
+print(f(10))

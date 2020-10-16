@@ -1,8 +1,7 @@
-def f(n):
+def F(n):
     if n > 18:
         return n
-    else:
-        return 3 * f(n + 1) + n + 8
+    return 3*F(n+1) + n + 8
 
 
-print(f(9))
+print(F(9))

@@ -7,4 +7,7 @@ n = int(input())
 for i in range(n):
     a.append(int(input()))
 a.sort()
-print(sum(a[:10]))
+kol5 = n // 20
+new_a = a[kol5:-kol5]
+print(sum(new_a))
+print(max(new_a))

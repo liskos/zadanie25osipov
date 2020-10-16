@@ -1,12 +1,13 @@
-def f(x):
+def algor(d):
     s, n = 0, 0
     while s < 111:
-        s += 8
-        n += x
+        s = s + 8
+        n = n + d
     return n
 
 
-for i in range(1000):
-    print(f(i), i)
-    if f(i) == 28:
-        break
+for i in range(1, 10000):
+    if algor(i) == 28:
+        print(i, algor(i))
+
+

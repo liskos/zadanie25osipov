@@ -1,6 +1,6 @@
-a = 8 ** 2014 - 2 ** 614 + 45
-s = ''
-while a > 0:
-    s = str(a % 2) + s
-    a = a // 2
-print(s.count('1'))
+x = 8 ** 2014 - 2 ** 614 + 45
+s = ""
+while x > 0:
+    s = str(x % 2) + s
+    x = x // 2
+print(s.count("1"))

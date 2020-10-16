@@ -1,17 +1,13 @@
-def twosev(x):
-    x = str(x)
-    if '7' in x:
-        x = x.replace('7', '0', 1)
-        if '7' in x:
-            return True
-        else:
-            return False
-    else:
+def proverka(x):
+    if str(x).count("7") < 2:
         return False
+    if x % 17 != 0:
+        return False
+    return True
 
 
 a = []
-for i in range(333666, 667000):
-    if twosev(i) == True and i % 17 == 0:
+for i in range(333666, 666999+1):
+    if proverka(i):
         a.append(i)
 print(max(a), len(a))

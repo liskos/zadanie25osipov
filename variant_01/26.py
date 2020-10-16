@@ -6,5 +6,5 @@ a = []
 n = int(input())
 for i in range(n):
     a.append(int(input()))
-a.sort()
-print(sum(a[:10]))
+a.sort(reverse=True)
+print(sum(a[:4]))

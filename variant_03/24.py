@@ -1,5 +1,6 @@
-file = open(file='Задание 24/24.txt', mode='r', encoding='utf8')
-x = 0
+file = open(file="Задание 24/24.txt", mode="r", encoding="utf8")
+s = 0
 for line in file:
-    x += line.count('XYZ') + line.count('ZYX')
-print(x)
+    s += line.count("XYZ") + line.count("ZYX")
+print(s)
+file.close()

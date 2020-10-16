@@ -1,10 +1,15 @@
-def al(s):
-    a = list(map(int, str(s)))
-    little, big = min(a[0]+a[1], a[1]+a[2]), max(a[0]+a[1], a[1]+a[2])
-    return int(str(big) + str(little))
+def algor(x):
+    s = str(x)
+    sum1 = int(s[0]) + int(s[1])
+    sum2 = int(s[1]) + int(s[2])
+    if sum1 > sum1:
+        rez = str(sum1) + str(sum2)
+    else:
+        rez = str(sum2) + str(sum1)
+    return int(rez)
 
 
 for i in range(100, 1000):
-    if al(i) == 1712:
+    if algor(i) == 1712:
         print(i)
         break

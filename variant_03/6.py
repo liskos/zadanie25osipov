@@ -1,13 +1,13 @@
-def f(s):
+def algol(s):
     n = 0
     while s - n > 0:
-        s -= 10
-        n += 15
+        s = s - 10
+        n = n + 15
     return n
 
 
-a = []
-for i in range(1, 10000):
-    if f(i) == 165:
-        a.append(i)
-print(max(a))
+x = 0
+for i in range(0, 10000):
+    if algol(i) == 165:
+        x = i
+print(x)
