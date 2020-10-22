@@ -1,5 +1,5 @@
 a = []
-for a1 in 'абинет':
+for a1 in 'каинет':
     for a2 in 'кабинет':
         for a3 in 'кабинет':
             for a4 in 'кабинет':
