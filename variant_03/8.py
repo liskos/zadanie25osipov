@@ -6,4 +6,5 @@ for x in 'BEGK':
                 s = x + y + z + w
                 if s.count('E') == 2:
                     a.append(s)
+print(a)
 print(len(a))

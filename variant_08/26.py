@@ -5,10 +5,10 @@ n = int(input())
 a = []
 for i in range(n):
     a.append(int(input()))
-a.sort()
-k = int(0.2 * n)
+a.sort(reverse=True)
+k = int(n // 5)
 S = sum(a)
-plata_b = int(0.8 * sum(a[0:k]))
-plata_neb = int(0.6 * S - plata_b)
-x = (plata_neb / S)
-print(plata_b, int(x * min(a)))
+plata_b = int(0.8 * sum(a[:k]))
+prosent_neb = (S * 0.6 - 0.8*sum(a[:k]))/sum(a[k:])
+plata_neb = prosent_neb * a[-1]
+print(plata_b, int(plata_neb))

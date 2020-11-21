@@ -1,23 +1,17 @@
 def thirty_four(x):
-    x = str(x // 1000 % 10) + str(x // 100 % 10)
-    if int(x) < 50:
-        return True
-    else:
-        return False
+    return int(str(x)[-4:-2]) < 50
 
 
 def mod(x):
-    a1, a2 = x // 1000, x % 1000
-    if a1 % 5 == a2 % 5:
-        return True
-    else:
-        return False
+    a1 = str(x)[:3]
+    a2 = str(x)[-3:]
+    return int(a1) % 5 == int(a2) % 5
 
 
 k = 0
 b = 0
-for a in range(24615, 875622):
+for a in range(246815, 875622):
     if thirty_four(a) and mod(a):
         k += 1
         b = a
-print(k, a)
+print(b, k)

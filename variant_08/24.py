@@ -1,4 +1,4 @@
-file = open(file='Задание 24/24.txt', mode='r', encoding='utf8')
+file = open(file='Задание 24/24test.txt', mode='r', encoding='utf8')
 k = 0
 m = 0
 l = 3

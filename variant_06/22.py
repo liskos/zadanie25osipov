@@ -10,7 +10,14 @@ def f(x):
     return S
 
 
-i = 0
-while f(i) < 25:
-    i += 1
-print(i)
+a = []
+for i in range(1, 100000):
+    if f(i) > 25:
+        a.append(f(i))
+print(min(a))
+b = []
+minn = min(a)
+for i in range(1, 100000):
+    if f(i) == minn:
+        b.append(i)
+print(min(b))

@@ -11,4 +11,4 @@ for x in [False, True]:
             for w in [False, True]:
                 f = (x or not y) and (not(x == z)) and w
                 if f:
-                    print(int(w), int(z), int(y), int(x), int(f))
+                    print(int(x), int(w), int(y), int(z), int(f))

@@ -1,5 +1,5 @@
 import sys
-file = open(file='Задание 27/27-B.txt', mode='r', encoding='utf8')
+file = open(file='Задание 27/27-A.txt', mode='r', encoding='utf8')
 sys.stdin = file
 n = int(input())
 a = []
