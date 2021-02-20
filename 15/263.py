@@ -1,7 +1,7 @@
 def f(a):
     for x in range(1, 1000):
         for y in range(1, 1000):
-            if not(((x > 5) or (x * x <= a)) and ((y * y > a) or (y < 7))):
+            if not(((y*y>=30) or (y < a)) and ((x>a) or (x*x<150))):
                 return False
     return True
 
@@ -9,5 +9,5 @@ def f(a):
 a = 0
 for x in range(1, 1000):
     if f(x):
-        a = x
+        a += 1
 print(a)
