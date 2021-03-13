@@ -1,6 +1,6 @@
-for a in True, False:
-    for b in True, False:
-        for c in True, False:
+for a in 0, 1:
+    for b in 0, 1:
+        for c in 0, 1:
             f = a == (b or c) == b
             if f:
                 f = int(f)

@@ -10,7 +10,7 @@ def f(n):
     for i in range(n, 71):
         c.append(i)
     for x in range(1, 1000):
-        if not(x in a or x in b) and (x in c or x in a):
+        if (x not in a or x in b) and (x in c or x in b):
             k += 1
     if k > 25:
         return True

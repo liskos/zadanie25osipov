@@ -1,7 +1,7 @@
 def f(a):
-    for x in range(1, 100):
-        for y in range(1, 100):
-            if not(((3*y+5*x)!=60) or ((x)<a)and ((y)<a)):
+    for x in range(0, 100):
+        for y in range(0, 100):
+            if not(((3*y+5*x)!=60) or (x<a and y<a)):
                 return False
     return True
 

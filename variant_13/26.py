@@ -5,9 +5,9 @@ a = []
 for i in range(n):
     a.append(int(input()))
 a.sort()
-s1 = 0.7 * sum(a[:int(0.7*len(a))+1]) + 0.6 * sum(a[int(0.7*len(a)):]) #1variant
-s2 = 0.6 * sum(a[:int(0.5*len(a))+1]) + 0.65 * sum(a[int(0.5*len(a)):]) #2variant
+s1 = int(0.7 * sum(a[:int(0.7*n)]) + 0.6 * sum(a[int(0.7*n):])) #1variant
+s2 = int(0.6 * sum(a[:int(0.5*n)]) + 0.65 * sum(a[int(0.5*n):])) #2variant
 if s1 > s2:
-    print(1, 0.6 * max(a))
+    print(s1 - s2, 0.6 * max(a))
 else:
-    print(2, 0.65 * max(a))
+    print(s2 - s1, 0.65 * max(a))

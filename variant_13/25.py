@@ -1,24 +1,22 @@
 def es(x):
-    for i in range(2, int(x**0.5)+1):
-        if x % i == 0:
-            return False
-    return True
+    mas_prost = [2]
+    for i in range(2, x+1):
+        for prost in mas_prost:
+            if i % prost == 0:
+                break
+        else:
+            mas_prost.append(i)
+    return mas_prost
 
 
-def delit(x):
-    k = 0
-    for i in range(2, int(x**0.5) +1):
-        if es(i) and x//i == 0:
-            if x//i == x//(x//i):
-                k += 1
-            else:
-                k +=2
-    if k < 6:
-        return False
-    return True
-
+prost = es(51238)
+print(prost)
 
 for i in range(25317,51238):
-    if delit(i):
-        print(i)
-#???
+    a = []
+    for pro in prost:
+        if i % pro == 0 and i != pro:
+            a.append(pro)
+    if len(a) >= 6:
+
+        print(i, max(a))

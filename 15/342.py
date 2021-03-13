@@ -6,7 +6,7 @@ def f(a):
     return True
 
 
-for i in range(1000):
+for i in range(10000):
     if f(i):
         print(i)
         break
