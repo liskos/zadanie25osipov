@@ -1,20 +1,13 @@
-def ndel():
-    a = [2,3]
-    for i in range(4, 1235):
-        for d in a:
-            if i%d == 0:
-                continue
-        a.append(i)
-    return a
-
-
-def delit(n, x):
+def delit(n):
     k = 0
-    for i in n:
-        if x % i == 0:
+    for i in range(1, n+1):
+        if n % i == 0:
             k+=1
     return k
 
-
-n = ndel()
-for i in range(541, 1235): #!!!!
+a = []
+kmax = 0
+for i in range(541, 1235):
+    if delit(i) > delit(kmax):
+        kmax = i
+print(delit(kmax), kmax)

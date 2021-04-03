@@ -5,12 +5,12 @@ def f(x):
         a += 1
         b += x % 8
         x = x // 8
-    if a == 3 and b == 24:
+    if a == 2 and b == 5:
         return True
     return False
 
 
-for i in range(24, 0, -1):
+for i in range(1000, 0, -1):
     if f(i):
         print(i)
         break

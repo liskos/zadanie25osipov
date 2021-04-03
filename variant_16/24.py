@@ -9,7 +9,7 @@ for s in file:
         else:
             if l < k:
                 l = k
-            k = 0
+            k = 1
             w = i
 if l < k:
     l = k
