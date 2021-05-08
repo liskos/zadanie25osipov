@@ -9,9 +9,8 @@ for i in range(n):
         s += c
     else:
         a.append(c)
-a.sort(reverse=True)
-print(a[1])
-for i in range(len(a)):
-    if i % 2 != 0:
-        a[i] = a[i] * 0.8
-print(int(s + sum(a) + 0.9))
+a.sort()
+print(a[len(a)//2])
+for i in range(len(a)//2):
+    a[i] = a[i] * 0.8
+print(s + sum(a))

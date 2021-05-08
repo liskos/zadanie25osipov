@@ -1,27 +1,18 @@
-def is_latinica(x):
-    return ("a" <= x <= "z") or ("A" <= x <= "Z")
+def f(x):
+    a = []
+    for i in range(2, int(x**0.5) +1):
+        if x % i == 0:
+            a.append(i)
+            a.append(x//i)
+    a = set(a)
+    return sum(a)
 
 
-def sdvig(stroka_sim):
-    s = ""
-    for sumvol in stroka_sim:
-        if is_latinica(chr(ord(sumvol) + 1)):
-            s += chr(ord(sumvol) + 1)
-        else:
-            s += chr(ord(sumvol) + 1 - 26)
-    return s
-
-
-s = input() + " "
-new_str = ""
-stroka = ""
-for sumvol in s:
-    if is_latinica(sumvol):
-        stroka += sumvol
-    else:
-        for _ in range(len(stroka)):
-            stroka = sdvig(stroka)
-        new_str += stroka
-        new_str += sumvol
-        stroka = ""
-print(new_str[:-1])
+k = 0
+for i in range(350300, 999999):
+    s = f(i)
+    if s % 13 == 0:
+        print(i, s//13)
+        k += 1
+        if k == 6:
+            break
