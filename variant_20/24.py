@@ -1,13 +1,12 @@
+import sys
 file = open(file='Задание 24/24.txt')
+sys.stdin = file
+
 mk = 0
 st = ''
-for s in file:
-    for i in s:
-        if 'XZZY' not in st:
-            st += i
-            k = len(st)
-            if k > mk:
-                mk = k
-        else:
-            st = ''
-print(mk)
+s = list(map(len, input().split("XZZY")))
+for i in range(len(s)):
+    s[i]+=6
+s[0] -= 3
+s[-1] -= 3
+print(max(s))
