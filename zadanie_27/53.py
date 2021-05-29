@@ -7,8 +7,8 @@ m3 = [1000100] * 3
 for _ in range(n):
     a = int(input())
     for i in range(3):
-        m3[(a + i) % 3] = min(m3[(a + i) % 3], m2[i % 2] + a)
+        m3[(a + i) % 3] = min(m3[(a + i) % 3], m2[i] + a)
     for i in range(3):
-        m2[(a + i) % 3] = min(m2[(a + i) % 3], m1[i % 2] + a)
+        m2[(a + i) % 3] = min(m2[(a + i) % 3], m1[i] + a)
     m1[a % 3] = min(m1[a % 3], a)
 print(m3[0])
