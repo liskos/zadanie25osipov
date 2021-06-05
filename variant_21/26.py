@@ -1,17 +1,14 @@
 import sys
 sys.stdin = open(file='Задание 26/26.txt')
 s, n = map(int, input().split())
-a = []
 v, k = 0, 0
-l = 9999999
-for _ in range(n):
-    a.append(int(input()))
+a = [int(input()) for _ in range(n)]
 a.sort()
 for i in range(n):
     if v + a[i] <= s:
         v += a[i]
         k += 1
-    else:
-        l = min(i, l)
-print(k, v - a[l], s)
-print(a[l:])
+sv = s - v + a[k-1]
+m =max([a[i] for i in range(k-1, n) if a[i] <= sv])
+print("максимальное число пользователей", k)
+print("максимальный размер который мог быть сохранен", m)

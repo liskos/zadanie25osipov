@@ -1,6 +1,6 @@
 def f(x):
     k = 0
-    for i in range(2, int(x ** 0.5) + 1):
+    for i in range(1, int(x ** 0.5) + 1):
         if x % i == 0:
             if x // i == i:
                 k += 1
@@ -12,4 +12,4 @@ def f(x):
 a = []
 for i in range(79201, 80001):
     a.append(f(i))
-print(max(a))
+print(max(a, key=lambda x: (x[0],x[1])))
