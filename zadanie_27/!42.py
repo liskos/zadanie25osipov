@@ -13,12 +13,16 @@ for i in range(n):
     if rb_c % 2 != 0:
         minrb_c = min(minrb_c, rb_c)
     s1, s2, s3 = s1 + a, s2 + b, s3 + c
-if s1 % 2 != s2 % 2:
-    if s1 % 2 == 0:
-        print(s3 - minrb_c)
-    else:
-        print(s3 - minra_c)
-elif s1 % 2 == s2 % 2 and s1 % 2 != 0 and minra_b == 100000:
-    print(s3 - minra_c - minrb_c)
-else:
+if s2 % 2 == 0 and s1 % 2 == 0:
     print(s3)
+elif s2 % 2 == s1 % 2 == 1 and minra_b != 100000:
+    print(s3)
+elif s1 % 2 == s2 % 2 == 1 and minra_b == 100000:
+    print("3")
+    print(s3 - minra_c - minrb_c)
+elif s2 % 2 != s1 % 2 and minra_b != 100000:
+    print(s3 - min(minra_c, minrb_c))
+elif s1 % 2 != 0:
+    print(s3 - minra_c)
+else:
+    print(s3 - minrb_c)
