@@ -1,9 +1,8 @@
 def f(n):
-    r, s = n, 0
-    while n > 0:
-        s += n % 2
-        n = n // 2
-    return r * 4 + s * 2
+    s = bin(n)[2:]
+    s = s + str(sum(map(int, s)) % 2)
+    s = s + str(sum(map(int, s)) % 2)
+    return int(s, 2)
 
 
 for i in range(1, 100000):

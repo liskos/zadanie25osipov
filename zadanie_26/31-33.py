@@ -9,6 +9,6 @@ for _ in range(n):
     else:
         a.append(b)
 a.sort()
-s += sum(a[1::2])
-print(s + 0.3 * sum(a[::2]))
-print(max(a[::2]))
+s += 0.7 * sum(a[:len(a)//2])
+print(s + sum(a[len(a)//2:]))
+print(max(a[:len(a)//2]))
